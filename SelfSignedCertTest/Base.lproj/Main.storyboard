@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Asf-27-gZR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NSURLSession-->
+        <scene sceneID="F4Y-QR-Fcd">
+            <objects>
+                <viewController id="1rH-Jq-xfv" userLabel="NSURLSession" customClass="URLSessionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lgf-g4-Dqu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-aW-Ba0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9j0-xr-eDh" firstAttribute="bottom" secondItem="Lfg-aW-Ba0" secondAttribute="bottom" id="YLW-84-bgg"/>
+                            <constraint firstItem="9j0-xr-eDh" firstAttribute="trailing" secondItem="Lfg-aW-Ba0" secondAttribute="trailing" id="rJm-Ys-2nm"/>
+                            <constraint firstItem="Lfg-aW-Ba0" firstAttribute="leading" secondItem="9j0-xr-eDh" secondAttribute="leading" id="tqK-fi-TpP"/>
+                            <constraint firstItem="Lfg-aW-Ba0" firstAttribute="top" secondItem="9j0-xr-eDh" secondAttribute="top" id="vN8-rX-uMU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9j0-xr-eDh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kgr-hq-8AB">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="qSx-Qi-ccv">
+                            <connections>
+                                <action selector="buttonClicked:" destination="1rH-Jq-xfv" id="Zc2-RT-bQp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView" destination="Lfg-aW-Ba0" id="qup-9I-IzH"/>
+                        <outlet property="refreshBtn" destination="qSx-Qi-ccv" id="HMM-pC-Evb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MC2-XO-KP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287" y="-1012"/>
+        </scene>
+        <!--导航-->
+        <scene sceneID="YgZ-qH-1YR">
+            <objects>
+                <viewController id="GUF-jU-VPq" userLabel="导航" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCZ-Gy-S1M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg5-Cb-Dgi">
+                                <rect key="frame" x="119" y="188" width="176" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="NSURLSession">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1rH-Jq-xfv" kind="show" id="rxG-2i-XI5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-6W-eP9">
+                                <rect key="frame" x="119" y="256" width="176" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="MKWebview">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OgC-NX-W62" kind="show" id="8uk-0r-uRU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-Cj-fMl">
+                                <rect key="frame" x="119" y="122" width="176" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="NSURLConnection">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Htc-an-ilC" kind="show" id="SfI-XC-II1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaM-lO-mxv">
+                                <rect key="frame" x="119" y="324" width="176" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="UIWebView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="h7I-14-i4p" kind="show" id="Ji5-S3-GQW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XhX-Fl-WPS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CuA-Qh-1j7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THn-eS-esg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.86956521739137" y="-745.3125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2XD-8A-cnm">
+            <objects>
+                <navigationController id="Asf-27-gZR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="41o-bp-ZW5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GUF-jU-VPq" kind="relationship" relationship="rootViewController" id="15r-b7-Aw8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfb-Jr-6MS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-745"/>
+        </scene>
+        <!--MKWebViewViewController-->
+        <scene sceneID="BwV-r0-PDM">
+            <objects>
+                <viewController id="OgC-NX-W62" userLabel="MKWebViewViewController" customClass="MKWebViewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cgv-J0-rGS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-ba-dJe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JFY-6D-28U" firstAttribute="trailing" secondItem="DEf-ba-dJe" secondAttribute="trailing" id="9jb-Jo-JWx"/>
+                            <constraint firstItem="DEf-ba-dJe" firstAttribute="top" secondItem="JFY-6D-28U" secondAttribute="top" id="Bas-Qf-DxM"/>
+                            <constraint firstItem="JFY-6D-28U" firstAttribute="bottom" secondItem="DEf-ba-dJe" secondAttribute="bottom" id="YLm-Yi-omX"/>
+                            <constraint firstItem="DEf-ba-dJe" firstAttribute="leading" secondItem="JFY-6D-28U" secondAttribute="leading" id="biE-nb-acB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JFY-6D-28U"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="329-pl-006">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="9y2-Zn-rOw">
+                            <connections>
+                                <action selector="buttonClicked:" destination="OgC-NX-W62" id="wsc-On-OVz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView" destination="DEf-ba-dJe" id="Ren-dZ-o8C"/>
+                        <outlet property="refreshBtn" destination="9y2-Zn-rOw" id="LTM-9H-NyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vF-qJ-6eo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287" y="-315"/>
+        </scene>
+        <!--UIWebViewViewController-->
+        <scene sceneID="vQs-He-QVf">
+            <objects>
+                <viewController id="h7I-14-i4p" userLabel="UIWebViewViewController" customClass="UIWebViewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vTa-YH-XhP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isB-6t-d9I">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h7I-14-i4p" id="ns3-33-FJM"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="isB-6t-d9I" firstAttribute="top" secondItem="ytX-qa-w98" secondAttribute="top" id="Sf8-CE-9Wb"/>
+                            <constraint firstItem="ytX-qa-w98" firstAttribute="bottom" secondItem="isB-6t-d9I" secondAttribute="bottom" id="VCD-EF-fY8"/>
+                            <constraint firstItem="isB-6t-d9I" firstAttribute="leading" secondItem="ytX-qa-w98" secondAttribute="leading" id="X0b-it-rSg"/>
+                            <constraint firstItem="ytX-qa-w98" firstAttribute="trailing" secondItem="isB-6t-d9I" secondAttribute="trailing" id="qgs-fr-mwN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ytX-qa-w98"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9YO-pk-7eB">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="3EF-9q-SuR">
+                            <connections>
+                                <action selector="buttonClicked:" destination="h7I-14-i4p" id="Aah-y2-Dct"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView" destination="isB-6t-d9I" id="YZY-fC-pOb"/>
+                        <outlet property="refreshBtn" destination="3EF-9q-SuR" id="rv5-yy-w7h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RN9-8U-mYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2286.9565217391305" y="370.98214285714283"/>
+        </scene>
+        <!--NSURLConnection-->
+        <scene sceneID="ZM7-gx-y4M">
+            <objects>
+                <viewController id="Htc-an-ilC" userLabel="NSURLConnection" customClass="URLConnectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w3l-Vi-cXL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9t-o8-Kxr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G9t-o8-Kxr" firstAttribute="leading" secondItem="naj-4z-mri" secondAttribute="leading" id="GCJ-Vv-I7L"/>
+                            <constraint firstItem="naj-4z-mri" firstAttribute="trailing" secondItem="G9t-o8-Kxr" secondAttribute="trailing" id="Xqz-gf-BiP"/>
+                            <constraint firstItem="naj-4z-mri" firstAttribute="bottom" secondItem="G9t-o8-Kxr" secondAttribute="bottom" id="ZCv-nL-Ed0"/>
+                            <constraint firstItem="G9t-o8-Kxr" firstAttribute="top" secondItem="naj-4z-mri" secondAttribute="top" id="nnL-wU-bfx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="naj-4z-mri"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vr8-Tt-aNk">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="WYe-P5-nix">
+                            <connections>
+                                <action selector="buttonClicked:" destination="Htc-an-ilC" id="IXO-IP-kG4"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="WYe-P5-nix" id="63D-lc-Wnx"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView" destination="G9t-o8-Kxr" id="ycX-AZ-nEN"/>
+                        <outlet property="refreshBtn" destination="WYe-P5-nix" id="fsm-eg-Yx4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cq-bw-C3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287" y="-1724"/>
+        </scene>
+    </scenes>
+</document>
